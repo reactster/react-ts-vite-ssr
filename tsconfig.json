@@ -21,11 +21,10 @@
     "target": "ES2017",
     "types": ["vite/client"],
     "paths": {
-      "@/*": ["./src/client/*"],
-      "@server/*": ["./src/server/*"]
+      "@/*": ["./src/*"]
     }
   },
-  "include": ["src/**/*", "types/*", "server.ts", "node_modules/vite/types/*"],
+  "include": ["src/**/*", "types/*", "server.ts", "request.ts", "node_modules/vite/types/*"],
   "ts-node": {
     "transpileOnly": true,
     "compilerOptions": {

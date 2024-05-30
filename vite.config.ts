@@ -5,11 +5,10 @@ import react from '@vitejs/plugin-react'
 import type { UserConfig } from 'vitest/config'
 
 const test = {
+  watch: false,
   globals: true,
   environment: 'jsdom',
   setupFiles: ['src/__tests__/setupTests.ts'],
-  threads: false,
-  watch: false,
 } satisfies UserConfig['test']
 
 // https://vitejs.dev/config/
@@ -23,8 +22,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src/client'),
-      '@server': path.resolve(__dirname, './src/server'),
+      '@': path.resolve(__dirname, './src'),
     },
   },
   test,
